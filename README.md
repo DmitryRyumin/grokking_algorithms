@@ -9,4 +9,4 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/DmitryRyumin/grokking_algorithms
 )
 
-## Бинарный поиск
+## [Бинарный поиск](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/algorithms/binary_search.py)
