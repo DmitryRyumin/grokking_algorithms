@@ -57,19 +57,24 @@ def binary_search(l: Union[List[int], range], item: int, out: bool = True) -> Op
     high = len(l) - 1 # Конец поиска
 
     res = None # Результат
+    cnt = 0 # Счетчик
 
     while low <= high:
-        mid = int((low + high) / 2) # Индекс среднего значения в списке
+        cnt += 1
+
+        mid = int((high - low) / 2 + low) # Индекс среднего значения в списке
 
         guess = l[mid] # Число
 
         if guess == item: res = (guess, mid); break # Число соответствует искомому
-        elif guess > item: high = mid - 1   # Число больше искомого
-        else: low = mid + 1                 # Число меньше искомого
+        elif guess > item: high = mid - 1 # Число больше искомого
+        else: low = mid + 1 # Число меньше искомого
+
+    if not res: res = low
 
     if out:
-        try: print(f'Искомое число ({res[0]}) находится по индексу ({res[1]})')
-        except TypeError: print(f'Искомое число ({item}) не найдено')
+        try: print(f'Искомое число ({res[0]}) находится по индексу ({res[1]}), итераций: {cnt}')
+        except TypeError: print(f'Искомое число ({item}) не найдено, должно иметь индекс ({res}), итераций: {cnt}')
 
     return res
 
@@ -78,5 +83,13 @@ def binary_search(l: Union[List[int], range], item: int, out: bool = True) -> Op
 # ######################################################################################################################
 
 if __name__ == "__main__":
-    binary_search([1, 2, 3, 4, 5, 6, 7, 8], 3)
-    binary_search([1, 2, 3, 4, 5, 6, 7, 8], 9)
+    lists = [
+        ([1, 2, 3, 4, 5, 6, 7, 8], 3),
+        ([1, 2, 3, 4, 5, 6, 7, 8], 9),
+        ([1, 2, 3, 4, 5, 6, 7, 8], 15),
+        ([1, 2, 3, 4, 5, 6, 7, 8], 0),
+        ([2, 3, 4, 5, 6, 7, 8], 0),
+        ([2, 5], 0)
+    ]
+
+    for curr in lists: binary_search(curr[0], curr[1])

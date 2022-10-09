@@ -10,3 +10,7 @@
 )
 
 ## [Бинарный поиск](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/algorithms/binary_search.py)
+
+### [LeetCode](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/leetcode/binary_search)
+
+#### [Search Insert Position (Вставка числа в отсортированный список)](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/leetcode/binary_search/35_Search_Insert_Position.py)
