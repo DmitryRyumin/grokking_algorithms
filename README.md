@@ -13,4 +13,7 @@
 
 ### [LeetCode](https://github.com/DmitryRyumin/grokking_algorithms/tree/main/samples/leetcode/binary_search)
 
+#### [Find First and Last Position of Element in Sorted Array (Поиск первой и последней позиции элемента в отсортированном
+списке)](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/samples/leetcode/binary_search/34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.py)
+
 #### [Search Insert Position (Вставка числа в отсортированный список)](https://github.com/DmitryRyumin/grokking_algorithms/blob/main/samples/leetcode/binary_search/35_Search_Insert_Position.py)
